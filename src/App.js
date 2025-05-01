@@ -34,7 +34,12 @@ function calculate() {
       if(result.length==1){
         return
       }
-       var sum = Number(result[0])+ Number(result[1])
+
+      var sum =0;
+      for (let i=0; i<result.length; i++) {
+        sum=sum+Number(result[i])
+      }
+       //var sum = Number(result[0])+ Number(result[1])
     }
    
     if (input.includes("-")){
@@ -42,21 +47,42 @@ function calculate() {
       if(result.length==1){
         return
       }
-      var sum = Number(result[0])- Number(result[1]) }
+      var sum = Number(result[0]);
+
+      for (let i=1; i<result.length; i++) {
+        sum=sum-Number(result[i])
+
+      }
+      //var sum = Number(result[0])- Number(result[1])
+       }
 
       if (input.includes("*")){
+
         let result= input.split("*")
         if(result.length==1){
           return
         }
-        var sum = Number(result[0])* Number(result[1]) }
+
+        var sum=Number(result[0]);
+      for (let i=1;i<result.length; i++){
+
+        sum= sum*Number(result[i])
+      }
+        //var sum = Number(result[0])* Number(result[1])
+         }
   
         if (input.includes("/")){
           let result= input.split("/")
           if(result.length==1){
             return
           }
-          var sum = Number(result[0])/ Number(result[1]) }
+
+          var sum =Number(result[0]);
+          for(let i=1; i<result.length; i++){
+            sum=sum/Number(result[i])
+          }
+         // var sum = Number(result[0])/ Number(result[1]) 
+        }
     
 
       setInput(sum)
